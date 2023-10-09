@@ -1,0 +1,30 @@
+def main():
+    Notas = {'João': 4.0, 'Maria': 8.0, 'Pedro': 6.5, 'Ana': 10.0, 'Mariane': 2.0}
+    aprovados = {}
+    reprovados = {}
+    recuperacao = {}
+    for k in Notas:
+        if Notas[k] >= 5.0:
+            aprovados[k] = Notas[k]
+            status = 'aprovado'
+        elif 3.0 < Notas[k] < 5.0:
+            recuperacao[k] = Notas[k]
+            status = 'recuperação'
+        else:
+            reprovados[k] = Notas[k]
+            status = 'reprovado direto'
+    print('Aprovados: \n----------------------')
+    for n in aprovados:
+        print('{:<10} {:>10}'.format(n, Notas[n]))
+    print('----------------------\nRecuperação: \n----------------------')
+    for n in recuperacao:
+        print('{:<10} {:>10}'.format(n, Notas[n]))
+    print('----------------------\nReprovados: \n----------------------')
+    for n in reprovados:
+        print('{:<10} {:>10}'.format(n, Notas[n]))
+        
+        
+
+
+
+main()
